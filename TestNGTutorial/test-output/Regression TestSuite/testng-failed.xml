@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Regression TestSuite]" guice-stage="DEVELOPMENT">
+  <test name="GroupsDemo">
+    <groups>
+      <define name="all">
+        <include name="bikes"/>
+        <include name="suv"/>
+        <include name="sedan"/>
+      </define> <!-- all -->
+      <define name="nobikes">
+        <include name="suv"/>
+        <include name="sedan"/>
+      </define> <!-- nobikes -->
+      <run>
+        <include name="all"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testClasses.TestNG_Grouping2"/>
+    </classes>
+  </test> <!-- GroupsDemo -->
+</suite> <!-- Failed suite [Regression TestSuite] -->
